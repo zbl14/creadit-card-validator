@@ -26,3 +26,11 @@ Test: "It should return true if the sum ends zero"\
 const input = "4102-0808-6043-5620";\
 luhnRule(input);\
 Expected Output: true
+
+```sh
+Describe cardType()
+```
+Test: "It should return true if the length of card number is 15 or 16"\
+const input = "4102-0808-6043-5620";\
+cardType(input);\
+Expected Output: true

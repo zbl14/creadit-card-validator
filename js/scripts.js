@@ -1,4 +1,4 @@
-function luhnRule(input){
+function luhnRule(input) {
   let numArr = input.replace(/[^0-9]/g,"").split("").reverse();
   let uncheckedNumArr = [];
   let checkedNumArr = [];
@@ -18,6 +18,15 @@ function luhnRule(input){
   });
   const sumDigit = uncheckedNumArr.reduce((a,b) => a+b, 0) + doubledCheckedNumArr.reduce((a,b) => a+b, 0);
   if (sumDigit % 10 === 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+function cardType(input) {
+  let numArr = input.replace(/[^0-9]/g,"").split("");
+  if (numArr.length === 15 || numArr.length === 16) {
     return true
   } else {
     return false

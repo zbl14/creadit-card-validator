@@ -9,14 +9,14 @@ function luhnRule(input){
       uncheckedNumArr.push(parseInt(numArr[i])); 
     }
   }
-  // let doubleCheckedNumArr = checkedNumArr.map(function(checkedNum){
-  //   if (checkedNum * 2 > 9) {
-  //     return checkedNum * 2 - 9;
-  //   } else {
-  //     return checkedNum * 2;
-  //   }
-  // });
+  let doubleCheckedNumArr = checkedNumArr.map(function(checkedNum){
+    if (checkedNum * 2 > 9) {
+      return checkedNum * 2 - 9;
+    } else {
+      return checkedNum * 2;
+    }
+  });
+  console.log(doubleCheckedNumArr)
   // const sumAll = uncheckedNumArr.reduce((a,b) => a+b, 0) + doubleCheckedNumArr.reduce((a,b) => a+b, 0);
   // console.log(sumAll)
-  console.log(checkedNumArr, uncheckedNumArr)
 }

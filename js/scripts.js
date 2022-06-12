@@ -1,5 +1,5 @@
-function luhnRule(num){
-  let numArr = num.toString().replace(/[^0-9]/g,"").split("").reverse();
+function luhnRule(input){
+  let numArr = input.replace(/[^0-9]/g,"").split("").reverse();
   let uncheckedNumArr = [];
   let checkedNumArr = [];
   for (i = 0; i < numArr.length; i++) {
@@ -9,13 +9,14 @@ function luhnRule(num){
       uncheckedNumArr.push(parseInt(numArr[i])); 
     }
   }
-  let doubleCheckedNumArr = checkedNumArr.map(function(checkedNum){
-    if (checkedNum * 2 > 9) {
-      return checkedNum * 2 - 9;
-    } else {
-      return checkedNum * 2;
-    }
-  });
-  const sumAll = uncheckedNumArr.reduce((a,b) => a+b, 0) + doubleCheckedNumArr.reduce((a,b) => a+b, 0);
-  return sumAll
+  // let doubleCheckedNumArr = checkedNumArr.map(function(checkedNum){
+  //   if (checkedNum * 2 > 9) {
+  //     return checkedNum * 2 - 9;
+  //   } else {
+  //     return checkedNum * 2;
+  //   }
+  // });
+  // const sumAll = uncheckedNumArr.reduce((a,b) => a+b, 0) + doubleCheckedNumArr.reduce((a,b) => a+b, 0);
+  // console.log(sumAll)
+  console.log(checkedNumArr, uncheckedNumArr)
 }

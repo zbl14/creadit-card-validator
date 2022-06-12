@@ -17,7 +17,12 @@ const input = "4102-0808-8043-5620";\
 luhnRule(input);\
 Expected Output: [0, 3, 6, 0, 7, 7, 4, 2]
 
-Test: "It should return a transformed arr follow the Luhn double rule"\
+Test: "It should sum all digits from the uncheckedNumArr and the doubledcheckedNumArr"\
 const input = "4102-0808-8043-5620";\
 luhnRule(input);\
 Expected Output: 52
+
+Test: "It should return true if the sum ends zero"\
+const input = "4102-0808-6043-5620";\
+luhnRule(input);\
+Expected Output: true

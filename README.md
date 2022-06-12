@@ -17,3 +17,7 @@ const input = "4102-0808-8043-5620";\
 luhnRule(input);\
 Expected Output: [0, 3, 6, 0, 7, 7, 4, 2]
 
+Test: "It should return a transformed arr follow the Luhn double rule"\
+const input = "4102-0808-8043-5620";\
+luhnRule(input);\
+Expected Output: 52

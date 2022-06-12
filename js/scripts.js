@@ -16,7 +16,6 @@ function luhnRule(input){
       return checkedNum * 2;
     }
   });
-  console.log(doubleCheckedNumArr)
-  // const sumAll = uncheckedNumArr.reduce((a,b) => a+b, 0) + doubleCheckedNumArr.reduce((a,b) => a+b, 0);
-  // console.log(sumAll)
+  const sumDigit = uncheckedNumArr.reduce((a,b) => a+b, 0) + doubleCheckedNumArr.reduce((a,b) => a+b, 0);
+  console.log(sumDigit)
 }

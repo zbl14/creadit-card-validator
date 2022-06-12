@@ -27,7 +27,9 @@ function luhnRule(input) {
 function cardType(input) {
   let numArr = input.replace(/[^0-9]/g,"").split("");
   if (numArr.length === 15 || numArr.length === 16) {
-    return true
+    if (numArr[0] === 4) {
+      return "Visa"
+    }
   } else {
     return false
   }
